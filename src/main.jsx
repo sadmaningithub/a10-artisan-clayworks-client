@@ -9,6 +9,8 @@ import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import AddItem from './components/AddItem/AddItem';
 import UpdateItem from './components/UpdateItem/UpdateItem';
+import AllItems from './components/AllItems/AllItems';
+import MyList from './components/MyItemList/MyList';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
     children: [{
       path: '/',
       element: <Home></Home>
+    },
+    {
+      path: '/allItems',
+      element: <AllItems></AllItems>
+    },
+    {
+      path: '/myList',
+      element: <MyList></MyList>
     },
     {
       path: '/addItem',
