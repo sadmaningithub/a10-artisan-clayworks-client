@@ -11,6 +11,9 @@ import AddItem from './components/AddItem/AddItem';
 import UpdateItem from './components/UpdateItem/UpdateItem';
 import AllItems from './components/AllItems/AllItems';
 import MyList from './components/MyItemList/MyList';
+import { register } from 'swiper/element/bundle';
+
+register();
 
 const router = createBrowserRouter([
   {
