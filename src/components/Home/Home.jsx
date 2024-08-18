@@ -1,10 +1,12 @@
 import Banner from "../Banner/Banner";
+import FeaturedItems from "../FeaturedItems/FeaturedItems";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <FeaturedItems></FeaturedItems>
         </div>
     );
 };
