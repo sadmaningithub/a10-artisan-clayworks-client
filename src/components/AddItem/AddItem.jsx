@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2'
 
 const AddItem = () => {
 
@@ -20,7 +20,7 @@ const AddItem = () => {
         const newItem = { itemName, subCategory, itemPrice, description, imageUrl, rate, custom, processTime, stockInfo, mail, name }
         console.log(newItem)
 
-        fetch('http://localhost:5000/collection', {
+        fetch('http://localhost:5000/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,11 +31,17 @@ const AddItem = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Items added successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Done'
+                })
             })
     }
 
     return (
-        <div className="">
+        <div className="my-10">
 
             <h1 className="text-3xl text-center my-10">Add Item</h1>
 
@@ -67,7 +73,7 @@ const AddItem = () => {
                                 <span className="label-text">Price</span>
                             </div>
                         </label>
-                        <input type="number" placeholder="Type here" name="price" className="input input-bordered w-full" />
+                        <input type="text" placeholder="Type here" name="price" className="input input-bordered w-full" />
                     </div>
 
                     <div>
@@ -94,7 +100,7 @@ const AddItem = () => {
                                 <span className="label-text">Rating</span>
                             </div>
                         </label>
-                        <input type="number" placeholder="Type here" name="rating" className="input input-bordered w-full" />
+                        <input type="Text" placeholder="Type here" name="rating" className="input input-bordered w-full" />
                     </div>
 
                     <div>

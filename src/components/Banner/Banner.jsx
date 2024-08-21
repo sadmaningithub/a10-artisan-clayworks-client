@@ -7,10 +7,10 @@ const Banner = () => {
         <div className='max-w-7xl mx-auto text-white'>
             <swiper-container
                 slides-per-view="1"
-                // loop='true'
+                loop='true'
                 navigation="true"
                 pagination="true"
-                // autoplay-delay="3500"
+                autoplay-delay="3500"
                 effect="fade"
             >
 
