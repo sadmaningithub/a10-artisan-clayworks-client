@@ -4,7 +4,7 @@ import img3 from '../../assets/img/3.png'
 
 const Banner = () => {
     return (
-        <div className='max-w-7xl mx-auto text-white'>
+        <div className='max-w-7xl mx-auto mb-10 text-white'>
             <swiper-container
                 slides-per-view="1"
                 loop='true'
