@@ -12,6 +12,12 @@ import UpdateItem from './components/UpdateItem/UpdateItem';
 import AllItems from './components/AllItems/AllItems';
 import MyList from './components/MyItemList/MyList';
 import { register } from 'swiper/element/bundle';
+import Details from './components/Details/Details';
+import Register from './components/Register/Register';
+import LogIn from './components/LogIn/LogIn';
+
+
+
 
 register();
 
@@ -36,8 +42,19 @@ const router = createBrowserRouter([
       element: <AddItem></AddItem>
     },
     {
+      path: '/details/:id',
+      element: <Details></Details>,
+      loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+    },
+    {
       path: '/updateItem',
       element: <UpdateItem></UpdateItem>
+    },{
+      path: '/register',
+      element: <Register></Register>
+    },{
+      path: '/login',
+      element: <LogIn></LogIn>
     }]
   },
 ]);
