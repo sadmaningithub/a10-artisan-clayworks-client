@@ -15,6 +15,7 @@ import { register } from 'swiper/element/bundle';
 import Details from './components/Details/Details';
 import Register from './components/Register/Register';
 import LogIn from './components/LogIn/LogIn';
+import AuthProvider from './providers/AuthProvider';
 
 
 
@@ -44,15 +45,15 @@ const router = createBrowserRouter([
     {
       path: '/details/:id',
       element: <Details></Details>,
-      loader: ({params}) => fetch(`http://localhost:5000/items/${params.id}`)
+      loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
     },
     {
       path: '/updateItem',
       element: <UpdateItem></UpdateItem>
-    },{
+    }, {
       path: '/register',
       element: <Register></Register>
-    },{
+    }, {
       path: '/login',
       element: <LogIn></LogIn>
     }]
@@ -61,6 +62,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

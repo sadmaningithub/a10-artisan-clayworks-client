@@ -42,8 +42,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end z-10	">
-                <Link to='/register'><button className="btn">Sign Up</button></Link> 
-                <Link to='/login'><button className="btn">Log In</button></Link> 
+                <Link to='/register'><button className="btn">Register</button></Link> 
+                <Link to='/login'><button className="btn">Login</button></Link> 
                 
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
