@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
@@ -39,7 +40,7 @@ const Register = () => {
 
     return (
         <div className="hero min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Register now!</h1>
 
@@ -69,12 +70,12 @@ const Register = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-                            {/* <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                            </label> */}
+                            <label className="label">
+                                <span>Already have an account? <Link className="text-blue-500" to='/login'>Login</Link> </span>
+                            </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Register</button>
                         </div>
                     </form>
                 </div>

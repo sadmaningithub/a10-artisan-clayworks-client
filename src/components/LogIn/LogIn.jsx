@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 
@@ -34,7 +35,7 @@ const LogIn = () => {
 
     return (
         <div className="hero min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Login now!</h1>
                     
@@ -57,6 +58,7 @@ const LogIn = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
+                        <span>Don&apos;t have an account? <Link className="text-blue-500" to='/register'>Register Now!</Link> </span>
                     </form>
                 </div>
             </div>

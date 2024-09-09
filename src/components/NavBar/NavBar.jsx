@@ -1,7 +1,19 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    console.log(user)
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const navLinks = <>
         <li> <NavLink to='/'>Home</NavLink> </li>
@@ -42,25 +54,29 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end z-10	">
-                <Link to='/register'><button className="btn">Register</button></Link> 
-                <Link to='/login'><button className="btn">Login</button></Link> 
-                
-                <div className="dropdown dropdown-end">
+                {
+                    user ? <button onClick={handleSignOut} className="btn">Log out</button> : <Link to='/login'><button className="btn">Login</button></Link>
+                }
+                {/* <Link to='/register'><button className="btn">Register</button></Link> */}
+
+                {
+                    user && <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img
-                                alt="Tailwind CSS Navbar component"
-                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                alt={user.displayName}
+                                src={user.photoUrl}/>
                         </div>
                     </div>
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a>Profile</a></li>
+                        <li><a>Edit Profile</a></li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
                     </ul>
-                </div>
+                </div> 
+                }
+                
             </div>
         </div>
     );
