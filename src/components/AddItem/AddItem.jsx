@@ -43,7 +43,7 @@ const AddItem = () => {
     return (
         <div className="my-10">
 
-            <h1 className="text-3xl text-center my-10">Add Item</h1>
+            <h1 className="text-3xl text-center my-10">Add Product</h1>
 
             <form onSubmit={handleAdd} className="">
 
@@ -149,7 +149,7 @@ const AddItem = () => {
                     </div>
 
                     <div className="flex justify-center">
-                        <input type="submit" value="Add" className="btn btn-neutral px-6" />
+                        <input type="submit" value="Add Product" className="btn btn-neutral px-6" />
                     </div>
                 </div>
 
