@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 const Details = () => {
 
     const item = useLoaderData()
-    console.log(item)
+    // console.log(item)
 
     const { itemName, subCategory, itemPrice, description, imageUrl, rate, custom, processTime, stockInfo } = item
 

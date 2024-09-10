@@ -43,7 +43,7 @@ const AddItem = () => {
     return (
         <div className="my-10">
 
-            <h1 className="text-3xl text-center my-10">Add Product</h1>
+            <h1 className="text-3xl font-bold text-center my-10">Add Product</h1>
 
             <form onSubmit={handleAdd} className="">
 
