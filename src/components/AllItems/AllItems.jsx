@@ -1,3 +1,4 @@
+import { BsCurrencyDollar } from "react-icons/bs";
 import { Link, useLoaderData } from "react-router-dom";
 
 
@@ -36,7 +37,7 @@ const AllItems = () => {
                                 <tr className="hover" key={item._id} >
                                     <th> <img src={item.imageUrl} className="max-w-xs" alt="" /> </th>
                                     <td>{item.itemName}</td>
-                                    <td>{item.itemPrice}</td>
+                                    <td className="">{item.itemPrice}  </td>
                                     <td>{item.itemStock}</td>
                                     <td><Link to={`/details/${item._id}`}> <button className="btn">View Details</button> </Link></td>
                                 </tr>

@@ -16,6 +16,7 @@ import Details from './components/Details/Details';
 import Register from './components/Register/Register';
 import LogIn from './components/LogIn/LogIn';
 import AuthProvider from './providers/AuthProvider';
+import PrivateRoute from './route/PrivateRoute';
 
 
 
@@ -37,20 +38,20 @@ const router = createBrowserRouter([
     },
     {
       path: '/myList',
-      element: <MyList></MyList>
+      element: <PrivateRoute><MyList></MyList></PrivateRoute> 
     },
     {
       path: '/addItem',
-      element: <AddItem></AddItem>
+      element: <PrivateRoute><AddItem></AddItem></PrivateRoute> 
     },
     {
       path: '/details/:id',
-      element: <Details></Details>,
+      element: <PrivateRoute><Details></Details></PrivateRoute> ,
       loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
     },
     {
       path: '/updateItem/:id',
-      element: <UpdateItem></UpdateItem>,
+      element: <PrivateRoute><UpdateItem></UpdateItem></PrivateRoute> ,
       loader: ({ params }) => fetch(`http://localhost:5000/items/${params.id}`)
     }, {
       path: '/register',

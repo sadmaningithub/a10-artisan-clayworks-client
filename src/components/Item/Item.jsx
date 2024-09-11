@@ -1,3 +1,5 @@
+import { BsCurrencyDollar } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -19,12 +21,12 @@ const Item = ({ item }) => {
                 <div className="card-body text-left grow">
                     <h2 className="card-title flex-wrap">
                         {itemName}
-                        <div className="badge ">{stockInfo}</div>
+                        <div className="badge text-white bg-green-500 ">{stockInfo}</div>
                     </h2>
-                    <p>Rating: {rate}</p>
+                    <p className="flex flex-row items-center gap-1" > {rate} <FaStar /></p>
                     <div className="card-actions flex items-center justify-between">
-                        <h4 className="text-lg">{itemPrice} </h4>
-                        <Link to={`/details/${_id}`}>View Details</Link>
+                        <h4 className="text-lg flex flex-row items-center "> <BsCurrencyDollar /> {itemPrice}   </h4>
+                        <Link to={`/details/${_id}`}> <button className="btn">View Details</button> </Link>
                         {/* <button className="btn"></button> */}
                         
                     </div>

@@ -1,3 +1,4 @@
+import { BsCurrencyDollar } from "react-icons/bs";
 import { useLoaderData } from "react-router-dom";
 
 
@@ -10,7 +11,7 @@ const Details = () => {
 
     return (
         <div className="space-y-10 my-10">
-            <h1 className="text-3xl">Product Details</h1>
+            <h1 className="text-3xl font-bold">Product Details</h1>
             <div className="flex flex-col lg:flex-row gap-16 ">
                 <div className="lg:w-1/2 ">
                     <img className="w-full" src={imageUrl} alt="" />
@@ -18,11 +19,11 @@ const Details = () => {
                 <div className="lg:w-1/2 space-y-5 ">
                     <h1 className="text-3xl font-semibold" >{itemName}</h1>
                     <p className="text-lg">Category: <span className="text-blue-400">{subCategory}</span></p>
-                    <h3 className="text-3xl font-semibold">{itemPrice}</h3>
+                    <h3 className="text-3xl font-semibold flex flex-row items-center gap-1"><BsCurrencyDollar /> {itemPrice}</h3>
                     <p className="text-lg">Stock: <span className="text-green-500">{stockInfo}</span></p>
                     <div className="flex flex-row space-x-3">
-                        <button className="btn btn-neutral">Add to Cart</button>
-                        <button className="btn btn-neutral">Wishlist</button>
+                        <button className="btn">Add to Cart</button>
+                        <button className="btn">Wishlist</button>
                     </div>
                 </div>
             </div>
