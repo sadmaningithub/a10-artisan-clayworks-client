@@ -56,7 +56,7 @@ const MyListItems = ({item}) => {
                     <div className="card-actions flex items-center justify-between">
                         <h4 className="text-lg">{itemPrice} </h4>
                         <Link to={`/details/${_id}`}>View Details</Link>
-                        <button className="btn">Update</button>
+                        <Link to={`/updateItem/${_id}`}> <button className="btn">Update</button>  </Link>
                         {/* <button className="btn">Delete</button> */}
                         <button onClick={() => handleDelete(_id)} className="btn">Delete</button>
                     </div>

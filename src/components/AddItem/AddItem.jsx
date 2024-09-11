@@ -33,7 +33,7 @@ const AddItem = () => {
                 console.log(data)
                 Swal.fire({
                     title: 'Success',
-                    text: 'Items added successfully',
+                    text: 'Item added successfully',
                     icon: 'success',
                     confirmButtonText: 'Done'
                 })
