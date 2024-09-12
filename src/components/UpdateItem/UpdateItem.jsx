@@ -25,7 +25,7 @@ const UpdateItem = () => {
         const mail = form.email.value;
         const name = form.user_name.value;
         const updatedItem = { itemName, subCategory, itemPrice, description, imageUrl, rate, custom, processTime, stockInfo, mail, name }
-        console.log(updatedItem)
+        // console.log(updatedItem)
         fetch(`http://localhost:5000/items/${_id}`, {
             method: 'PUT',
             headers: {

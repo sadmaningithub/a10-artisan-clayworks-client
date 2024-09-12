@@ -17,6 +17,7 @@ import Register from './components/Register/Register';
 import LogIn from './components/LogIn/LogIn';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './route/PrivateRoute';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [{
       path: '/',
       element: <Home></Home>
