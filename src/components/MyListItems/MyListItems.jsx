@@ -2,6 +2,8 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import PropTypes from 'prop-types'; 
+
 
 
 const MyListItems = ({ item }) => {
@@ -71,3 +73,7 @@ const MyListItems = ({ item }) => {
 };
 
 export default MyListItems;
+
+MyListItems.propTypes = {
+    item: PropTypes.object.isRequired
+}

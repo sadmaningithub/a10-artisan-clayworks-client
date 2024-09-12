@@ -1,10 +1,11 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-
+import PropTypes from 'prop-types';
 
 const Item = ({ item }) => {
+    
+    // console.log(typeof item)
 
     const { _id, itemName, itemPrice, imageUrl, rate, stockInfo} = item
     // console.log(_id)
@@ -37,3 +38,7 @@ const Item = ({ item }) => {
 };
 
 export default Item;
+
+Item.propTypes = {
+    item: PropTypes.object.isRequired
+}

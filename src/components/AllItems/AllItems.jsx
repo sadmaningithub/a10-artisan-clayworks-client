@@ -1,4 +1,4 @@
-import { BsCurrencyDollar } from "react-icons/bs";
+
 import { Link, useLoaderData } from "react-router-dom";
 
 
